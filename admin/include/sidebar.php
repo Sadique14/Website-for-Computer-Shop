@@ -4,51 +4,53 @@
       <tr>
         <th>Website Options</th>
       </tr>
+      <?php if(session::get('adminLevel')==0){ ?>
       <tr>
-        <td><a href="#">Title</a></td>
+        <td><a href="title.php">Title</a></td>
       </tr>
+      <?php } ?>
       <tr>
-        <td><a href="addCategory.php">Add Catagory</a></td>
+        <td><a href="addCategory.php">Add Category</a></td>
       </tr>
         <tr>
-        <td><a href="addSubCategory.php">Add Sub-Catagory</a></td>
+        <td><a href="addSubCategory.php">Add Sub-Category</a></td>
       </tr>
         <tr>
-        <td><a href="category-list.php">Catagory List</a></td>
+        <td><a href="category-list.php">Category List</a></td>
       </tr>
         <tr>
-        <td><a href="#">Add Product</a></td>
+        <td><a href="addProduct.php">Add Product</a></td>
       </tr>
         <tr>
-        <td><a href="#">Product List</a></td>
+        <td><a href="productList.php">Product List</a></td>
       </tr>
         <tr>
-        <td><a href="#">Add Slider</a></td>
-      </tr>
-        <tr>
-        <td><a href="#">Slider List</a></td>
+        <td><a href="Slider.php">Slider</a></td>
       </tr>
         <?php if(session::get('adminLevel')==0){ ?>
         <tr>
-    <td><a href="#">Add Branch</a></td>
+    <td><a href="addBranch.php">Add Branch</a></td>
       </tr>
         <tr>
-        <td><a href="#">Branch List</a></td>
+        <td><a href="editBranch.php">Edit Branch</a></td>
       </tr>
       <tr>
-        <td><a href="#">Links</a></td>
+        <td><a href="links.php">Links</a></td>
       </tr>
       <tr>
-        <td><a href="#">Copyright</a></td>
+        <td><a href="copyright.php">Copyright</a></td>
       </tr>
       <tr>
-        <td><a href="#">About Us</a></td>
+        <td><a href="aboutUs.php">About Us</a></td>
       </tr>
         <tr>
-        <td><a href="#">Email</a></td>
+        <td><a href="email.php">Email</a></td>
       </tr>
         <tr>
-        <td><a href="#">Telephone</a></td>
+        <td><a href="telephone.php">Telephone</a></td>
+      </tr>
+      <tr>
+        <td><a href="logo&support.php">Logo & Support</a></td>
       </tr>
         <?php } ?>
     </table>

@@ -21,16 +21,29 @@
             else{
                 $category_id = (int) $category_id;
                 if($category_id>0){
-                    $query = "INSERT INTO sub_category (subcategory_name,category_id) VALUES(?,?)";
-                    $arr = array($name, $category_id);
-                    $result = $this->db->insertData($query, $arr);
-                    if($result){ 
-                        header('Location: addSubCategory.php');
-                        //$msg = "<span class='success'>Category inserted successfully</span>";
-                        //return $msg;
+                    $query = "SELECT subcategory_name FROM sub_category";
+                    $res = $this->db->readAllData($query);
+                    $temp = 0;
+                    foreach ($res as $rr) {
+                        if($rr['subcategory_name'] == $name)
+                            $temp = 1;
+                    }
+                    if($temp == 0){
+                        $query = "INSERT INTO sub_category (subcategory_name,category_id) VALUES(?,?)";
+                        $arr = array($name, $category_id);
+                        $result = $this->db->insertData($query, $arr);
+                        if($result){ 
+                            header('Location: addSubCategory.php');
+                            //$msg = "<span class='success'>Category inserted successfully</span>";
+                            //return $msg;
+                        }
+                        else{
+                            $msg = "<span class='error'>Failed</span>";
+                            return $msg;
+                        }
                     }
                     else{
-                        $msg = "<span class='error'>Failed</span>";
+                        $msg = "<span class='error'>Subcategory already exists</span>";
                         return $msg;
                     }
                 }
@@ -41,6 +54,10 @@
                 
                 }
             }
-            
+            public function readSubCategory(){
+            $query = "select * from sub_category";
+            $result = $this->db->readAllData($query);
+            return $result;
+           }
         }
 ?>

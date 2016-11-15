@@ -1,14 +1,15 @@
 <?php
-    require_once '../library/database.php';
+     $filepath = realpath(dirname(__FILE__));
+    require_once ($filepath.'/../library/database.php');
 ?>
 <?php
-    class rCategory{
+    class readCategory{
         private $db;
         public function __construct(){
             $this->db = new database();
         }
         public function readCat(){
-            $query = "select * from category";
+            $query = "select * from category order by category_name";
             $result = $this->db->readAllData($query);
             return $result;
         }
@@ -26,3 +27,4 @@
         }
     }
 ?>
+

@@ -14,6 +14,8 @@ html{
 }
 body{
     margin: auto 1px;
+    padding-left: 10px;
+    padding-right: 10px;
     background-color: #e2e2e2;
     background-image: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url(img/2.png);
     background-attachment: fixed;
@@ -95,7 +97,12 @@ input{
 .clearfix{
     clear:both
 }
+.search{
+    padding: 5px;
+    border: 1px solid transparent;
+}
 /*---------------------------------------------------NAVIGATION MENU---------------------*/
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -243,6 +250,10 @@ dot {
   .text {font-size: 11px}
 }
 
+.supportImg{
+    height: 500px;
+    width: 80%;
+}
 /*---------------------------------------------------FEATURED-PRODUCTS---------------------*/
 h2, h3, h6{
     color: orangered;
@@ -345,7 +356,7 @@ h3:after{
     height: 2px;
     background-color: #5c5555;
     content: "";
-    width: 115px;
+    width: 100%;
     margin-top: 10px;
 }
 .sorting{
@@ -402,7 +413,7 @@ h6:after{
     height: 2px;
     background-color: #5c5555;
     content: "";
-    width: 505px;
+    width: 100%;
     margin-top: 10px;
 }
 .img-box{
@@ -411,8 +422,8 @@ h6:after{
     margin: 20px 275px;
 }
 .img-box img{
-    height: 250px;
-    width: 290px;
+    /*height: 250px;
+    width: 290px;*/
 }
 .box2{
     text-align: center;
@@ -439,4 +450,62 @@ h6:after{
 
 
 
+/*..................................BRANCHES...............................*/
+.about{
+color: red;
+margin: 140px 140px;
+}
 
+.details ul{
+    text-align: center;
+}
+.details li{
+    width: 95%;
+    text-align: center;
+    background-color: transparent;
+    /*border: 1px solid #fc4646;*/
+    padding: 9px;
+   
+    list-style: none;
+    margin-bottom: 5px;
+    -webkit-transform: scale(1.00);
+    transform: scale(1.00);
+    -webkit-transition: background-color .5s, -webkit-transform .5s;
+    transition: background-color .5s, -webkit-transform .5s;
+    transition: transform .5s, background-color .5s;
+    transition: transform .5s, background-color .5s, -webkit-transform .5s;
+}
+.details li:hover{
+    -webkit-transform: scale(1.01);
+    transform: scale(1.01);
+    background-color: white;
+}
+
+.box:first-child{
+    margin-right: 10px;
+}
+
+.c {
+    height: 100px;
+    display: inline-block;
+}
+.box3{
+    
+}
+.details-about {
+    font-family: monospace;
+    font-weight: 100;
+    line-height: 140%;
+    padding: 57px;
+    text-align: center;
+}
+.details-about p{
+    margin-bottom: 20px;
+}
+.details {
+    background-color: transparent;
+}
+
+.contact-info {
+    text-align: center;
+}

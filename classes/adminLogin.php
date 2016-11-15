@@ -26,10 +26,18 @@
                 $arr = array($adminEmail,$adminPassword);
                 $result = $this->db->select($query, $arr);
                 if($result != false){
-                    session::set("login",true);
+                    $query = "select title from branches where admin_id=?";
+                    $arr = array(intval($result[0]['id']));
+                    $result2 = $this->db->select($query, $arr);
+
+                    session::set("loginShop",true);
                     session::set("adminId",$result[0]['id']);
                     session::set("adminEmail",$result[0]['email']);
                     session::set("adminLevel",$result[0]['level']);
+                    if(result2 != null)
+                        session::set("adminBranch",$result2[0]['title']);
+                    else
+                        session::set("adminBranch","0");
                     header("Location: ../admin/index.php");
                 }
                 else{

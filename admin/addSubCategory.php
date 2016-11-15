@@ -5,7 +5,7 @@
    <?php include 'include/sidebar.php';?>
 <?php
     $add = new subCategory();
-    $read = new rCategory();
+    $read = new readCategory();
     if($_SERVER['REQUEST_METHOD']=='POST'){
         $category_name=$_POST['category-list'];
         $category_id=$read->getCatId($category_name);
@@ -13,7 +13,7 @@
         $check = $add->addSubCat($names,$category_id[0]['category_id']);
     }
 ?>
-            <section class="col span-3-of-5 content-body">
+            <section class="col span-3-of-4 content-body">
                 <div class="row">
                     
                 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="content-form">
@@ -31,15 +31,6 @@
                                 ?>
                                 <option><?php echo $cat['category_name'];?></option>
                                 <?php }} ?>
-                                 //<?php
-                                   // $read = new rCategory();
-                                   // $AllCat = $read->readCat();
-                                   // if($AllCat){
-                                   //     foreach($AllCat as $cat){
-                                    //        echo "<option value=".$cat['category_id'].">".$cat['category_name']."</option>";
-                                    //    }
-                                   // }
-                              //  ?> 
                             </select>
                         </div>
                     </div>
@@ -61,7 +52,7 @@
                             <label>&nbsp;</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <input type="submit" value="Save">
+                            <input type="submit" value="Save" onclick="return confirm('Are you sure to Add!');">
                         </div>
                     </div>
                 </form>

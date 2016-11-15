@@ -7,7 +7,7 @@
 html{
     background-color: white;
     color: #6f6868;
-    font-family: "Source Sans Pro", sans-serif;
+    font-family: Arial, "Source Sans Pro", sans-serif;
     font-weight: 100;
     font-size: 15px;
     text-rendering: optimizeLegibility;
@@ -168,6 +168,7 @@ li.dropdown:visited {
 .sidebar{
     margin: 20px 20px;
     display: inline-block;
+    padding-bottom: 105px;
 }
 table{
     padding: 10px 10px;
@@ -225,9 +226,13 @@ table{
 }
 .label{
     margin-top: 15px;
+    color: black;
+    font-size: 96%;
 }
 .content-body input[type=text],
+.content-body input[type=url],
 .content-body input[type=email],
+.content-body input[type=password],
 select,
 textarea{
     margin: 0 0;
@@ -237,6 +242,20 @@ textarea{
     border: 1px solid rgba(255, 255, 255, 0.23);
     background-color: rgba(235, 235, 235, 0.24);
 }
+
+.content-body input[type=file]{
+        font-size: 90%;
+    padding: 4px 4px 5px 4px;
+    border-top: 1px solid #b3b3b3;
+    border-left: 1px solid #b3b3b3;
+    border-right: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+    display: inline-block;
+    margin: 0em 0em 0em 0em;
+    font: Arial;
+
+}
+
 input[type=submit]{
     padding: 10px;
     width: 25%;
@@ -250,6 +269,7 @@ input[type=submit]:hover{
     border: 1px solid #cf6d17;
     color: whitesmoke;
 }
+
 .content-body {
     padding-top: 20px;
 }
@@ -303,6 +323,7 @@ h1{
     color: indianred;
     font-size: 125%;
 }
+
 .tab table,
 .tab td,
 .tab th{
@@ -323,4 +344,47 @@ h1{
 .tab a:hover{
     color: red;
 }
+/*.....................................product-list..................................................*/
+.scroll a{ 
+    padding: 10px;
+    text-decoration: none;
+    color: #4a0202;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.33);
+}
+.scroll a:hover{
+    background-color: white;
+    color: indianred;
+}
+.scroll input[type=text]
+{
+    padding: 5px;
+    border-radius: 5%;
+    margin-bottom: 10px;
+    border: 1px solid white;
+}
+.scroll input[type=text]:hover
+{
+    border: 1px solid #cf6d17;
+}
+.scroll btn
+{
+    border-radius: 0%;
+}
+/*...............................SLIDER.....................*/
 
+.slider{
+    margin-bottom: 10px;
+}
+.slider a{
+    color: blue;
+    background-color: transparent;
+    text-decoration: none;
+    margin-left: 30px;
+    border: solid 1px white;
+    padding:10px;
+}
+.slider a:hover{
+    color: red;
+    background-color: white;
+}

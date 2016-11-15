@@ -21,7 +21,7 @@ class session{
 
  public static function checkSession(){    //session sesh hole login page e chole jabe
   self::init();
-  if (self::get("login")== false) {
+  if (self::get("loginShop")== false) {
    self::destroy();
    header("Location:login.php");
   }
@@ -29,7 +29,7 @@ class session{
 
  public static function checkLogin(){          //login obosthay thakle login page e na giye sorasori index page e jachse
   self::init();
-  if (self::get("login")== true) {
+  if (self::get("loginShop")== true) {
    header("Location:index.php");
   }
  }

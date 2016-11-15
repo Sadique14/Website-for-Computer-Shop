@@ -3,10 +3,10 @@
 <?php include 'include/sidebar.php';?>
 <?php require '../classes/readCategory.php'; ?>
 <?php
-$rc = new rCategory();
+$rc = new readCategory();
 $allCategory = $rc->readCat();
 ?>
-    <section class="col span-3-of-5 content-body">
+    <section class="col span-3-of-4 content-body">
         <div class="row tab">
             <h1>Category and Sub-category<br><span style="color:black;font-size:90%;font-weight:300;">(click on the name to edit/delete)</span></h1>
             <table style="width:100%">
@@ -23,12 +23,12 @@ $allCategory = $rc->readCat();
                 }              
                 ?>
                   <tr>
-                      <th rowspan="<?php echo $numOfSubCategory; ?>"><a href="edit.php?id=<?php $category['category_id'] ?>&name=<?php $category['category_id'] ?>&type=category"><?php echo $category['category_name']; ?> </a></th>
+                      <th rowspan="<?php echo $numOfSubCategory; ?>"><a href="edit.php?id=<?php echo $category['category_id']; ?>&name=<?php echo $category['category_name']; ?>&type=category"><?php echo $category['category_name']; ?> </a></th>
                   </tr>
                   <?php
                   for ($x = 1; $x < $numOfSubCategory; $x++){ ?>
                   <tr>
-                      <td><a href="edit.php?id=<?php $category['category_id'] ?>&name=<?php $category['category_id'] ?>&type=sub-category"><?php echo $subCategory[$index++]['subcategory_name']; ?></a></td>
+                      <td><a href="edit.php?id=<?php echo $subCategory[$index]['subcategory_id']; ?>&name=<?php echo $subCategory[$index]['subcategory_name']; ?> &type=subcategory"><?php echo $subCategory[$index++]['subcategory_name']; ?></a></td>
                   </tr>
                   <?php }} ?>
             </table>

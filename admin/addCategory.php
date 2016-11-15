@@ -9,7 +9,7 @@
         $check = $adcat->addCat($name);
     }
 ?>
-            <section class="col span-3-of-5 content-body">
+            <section class="col span-3-of-4 content-body">
                 <div class="row">
                     
                 <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" class="content-form">
@@ -31,7 +31,7 @@
                             <label>&nbsp;</label>
                         </div>
                         <div class="col span-2-of-3">
-                            <input type="submit" value="Save">
+                            <input type="submit" value="Save" onclick="return confirm('Are you sure to Add!');">
                         </div>
                     </div>
                 </form>
